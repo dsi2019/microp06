@@ -29,3 +29,11 @@ vuelos.
   
 3. Visualización de las tarjetas de embarque.
 - a. Con este servicio se espera que el usuario tenga en su app la tarjeta de embarque.
+- b. Deberá disponer de la siguiente información: nombre del pasajero, asiento asignado, grupo de embarque, hora de embarque, puerta de embarque, código QR para escaneo rápido (incluir una imagen trivial al ser prototipo).
+
+4. Página de información de aspectos legales de la reserva y realización de
+vuelos.
+- a. Incluir texto lorem ipsum al ser solo un prototipo.
+
+5. Enlace a la página web de la compañía.
+- a. El cliente solo quiere ver cómo quedará esta opción en la app por lo que se acordó que a seleccionar esta opción se puede redireccionar a la página de google.
