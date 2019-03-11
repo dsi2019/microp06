@@ -1,4 +1,31 @@
 # microp06
 
-- git checkout -b {tu nombre}
-- git push origin {tu nombre}
+## Escenario
+La Aerolínea Vuelos Europeos S.A. quiere realizar una aplicación móvil para que sus
+usuarios puedan interactuar con la empresa. Para ello a contratado tu servicios y deberás
+presentar al cliente en un periodo de 15 días un prototipo que convenza al cliente y así
+pasar a la etapa de validación con usuarios finales.
+En una primera reunión con el cliente ha solicitado los siguientes requisitos:
+
+# Servicios disponibles a través de la app:
+○ Consulta y reserva de vuelos disponibles.
+○ Consulta y facturación de reservas.
+○ Visualización de tarjetas de embarque.
+○ Página de información de aspectos legales de la reserva y realización de
+vuelos.
+○ Enlace a la página Web de la compañía.
+
+# Requisitos funcionales
+  
+1. Reserva de vuelos
+- a. Este servicio de la app permitirá al usuario consultar la oferta de vuelos disponibles ingresando el destino, origen y las fechas deseadas para volar.
+- b. El usuario revisará la oferta disponible y podrá reservar el vuelo de su interés.
+- c. El cliente aún no decide el método de pago por lo que en esta etapa no es necesario realizar cobros.
+  
+2. Consulta y facturación de reserva
+- a. Este servicio de la app permitirá al usuario consultar sus reservas y ver posibles incidencias en los mismos.
+- b. 24 horas antes del vuelo se permitirá realizar la facturación. Para la facturación del vuelo es imprescindible disponer de los siguientes datos del usuario: nombre y apellidos, pasaporte, número de contacto de emergencia.
+- c. Al finalizar la facturación de forma exitosa se generará la tarjeta de embarque en la sección correspondiente.
+  
+3. Visualización de las tarjetas de embarque.
+- a. Con este servicio se espera que el usuario tenga en su app la tarjeta de embarque.
