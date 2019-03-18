@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ReservasPage } from '../pages/reservas/reservas';
 import { MisVuelosPage } from '../pages/mis-vuelos/mis-vuelos';
 import { TarjetasPage } from '../pages/tarjetas/tarjetas';
+
+import​ { ​Vuelo } ​from​ ​'./vuelo'​;
 @Component({
   templateUrl: 'app.html'
 })
@@ -16,6 +18,13 @@ export class MyApp {
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
+
+  // Dummy Vuelos
+  public vuelos: Array<Vuelo>=[
+    new​ ​Vuelo(​'British Airways'​,​'#'​,​"Madrid",​"Paris","16:30","18:30",new​ ​Date​(​2018​,​3​,​1​),​​"16:30","18:30",new​ ​Date​(​2018​,​3​,​2), 200),
+    new​ ​Vuelo(​'British Airways'​,​'#'​,​"Madrid",​"Paris","16:30","18:30",new​ ​Date​(​2018​,​3​,​1​),​​"16:30","18:30",new​ ​Date​(​2018​,​3​,​2), 200),
+    new​ ​Vuelo(​'British Airways'​,​'#'​,​"Madrid",​"Paris","16:30","18:30",new​ ​Date​(​2018​,​3​,​1​),​​"16:30","18:30",new​ ​Date​(​2018​,​3​,​2), 200),
+  ]
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
