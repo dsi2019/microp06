@@ -24,7 +24,7 @@ export class MyApp {
     new​ ​Vuelo(​'British Airways'​,​'#'​,​"Madrid",​"Paris","16:30","18:30",new​ ​Date​(​2018​,​3​,​1​),​​"16:30","18:30",new​ ​Date​(​2018​,​3​,​2), 200),
     new​ ​Vuelo(​'British Airways'​,​'#'​,​"Madrid",​"Paris","16:30","18:30",new​ ​Date​(​2018​,​3​,​1​),​​"16:30","18:30",new​ ​Date​(​2018​,​3​,​2), 200),
     new​ ​Vuelo(​'British Airways'​,​'#'​,​"Madrid",​"Paris","16:30","18:30",new​ ​Date​(​2018​,​3​,​1​),​​"16:30","18:30",new​ ​Date​(​2018​,​3​,​2), 200),
-  ]
+  ];
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
