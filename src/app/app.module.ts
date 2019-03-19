@@ -11,6 +11,8 @@ import { ReservasPage } from '../pages/reservas/reservas';
 import { MisVuelosPage } from '../pages/mis-vuelos/mis-vuelos';
 import { TarjetasPage } from '../pages/tarjetas/tarjetas';
 
+import {VueloService} from '../services/vuelo.service'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -34,7 +36,8 @@ import { TarjetasPage } from '../pages/tarjetas/tarjetas';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    VueloService
   ]
 })
 export class AppModule {}
