@@ -8,7 +8,6 @@ import { ReservasPage } from '../pages/reservas/reservas';
 import { MisVuelosPage } from '../pages/mis-vuelos/mis-vuelos';
 import { TarjetasPage } from '../pages/tarjetas/tarjetas';
 
-import​ { ​Vuelo } ​from​ ​'./vuelo'​;
 @Component({
   templateUrl: 'app.html'
 })
