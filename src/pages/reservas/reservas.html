@@ -1,60 +1,54 @@
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <ion-icon name="menu" color="light"></ion-icon>
     </button>
-    <ion-title>Reservas   <ion-icon name="plane"></ion-icon></ion-title>
+    <ion-title><ion-icon name="plane" color="light"> Busca tu vuelo</ion-icon></ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  
-      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+<ion-content padding class="mainScreen">
+  <ion-card>
+    <!-- Est aparte me da errores -->
+      <!--ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
       <ion-list>
         <ion-item *ngFor="let item of items">
           {{ item }}
         </ion-item>
-      </ion-list>
-  <ion-card>
+      </ion-list-->
     <ion-card-header>
-      <ion-card-title> Seleciona tu destino </ion-card-title>
-      
+      <ion-card-title color="light"> Seleciona tu destino </ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+
       <ion-card>
         <ion-item>
-          <ion-textarea placeholder="Destino"></ion-textarea>
+          <ion-label floating >Destino</ion-label>
+          <ion-input type="text" [(ngModel)] = "userDestino"></ion-input>
         </ion-item>
       </ion-card>
-    </ion-card-content>
+
   </ion-card>
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Selecciona tus fechas</ion-card-title>
-      
+      <ion-card-title color="light">Selecciona tus fechas</ion-card-title>
     </ion-card-header>
       <ion-card>
           <ion-item>
-            <ion-label>Ida  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
-            <ion-datetime display-format="MMM DD, YYYY HH:mm"  ></ion-datetime>
+            <ion-label floating>Ida  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
+            <ion-datetime display-format="MMM DD, YYYY HH:mm"  [(ngModel)] = "userFechaIda"></ion-datetime>
           </ion-item>
       </ion-card>
       <ion-card>
         <ion-item>
-          <ion-label>Vuelta  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
-          <ion-datetime display-format="MMM DD, YYYY HH:mm"  ></ion-datetime>
+          <ion-label floating>Vuelta  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
+          <ion-datetime display-format="MMM DD, YYYY HH:mm" [(ngModel)] = "userFechaVuelta"></ion-datetime>
         </ion-item>
       </ion-card>
+      <button ion-button color="success" (click) ="showAlert()">Buscar</button>
     
-    <div width="auto">
-      <button ion-button color="success" width="auto">Buscar</button>
-    </div>
   </ion-card>
   <ion-content></ion-content>
-  <ion-footer>
-      <ion-toolbar>
-        <ion-title>DSI AirLines</ion-title>
-      </ion-toolbar>
-    </ion-footer>
+  
 </ion-content>

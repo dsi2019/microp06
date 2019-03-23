@@ -1,9 +1,21 @@
-page-reservas {
-    
+$colors: (
+    calm: (
+      base: #000,
+      contrast: #ffc900
+    ),
+);
+
+
+#mainScreen {
+    color:blue;
 }
 .card {
-    background-color: #B3C8CE; 
+    background: linear-gradient(135deg, #8019C6 0%,#2F93CC 100%);
 }
 .header{
-    color:#5A7295 ;
+    color:#8019C6 ;
 }
+.toolbar-background {
+    background-color:#8019C6;
+}
+

@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
-/**
- * Generated class for the ReservasPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -16,8 +11,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ReservasPage {
   searchQuery: string = '';
   items: string[];
+  userDestino: string;
+  userFechaIda: any; // any porque no se que tipo de dato es
+  userFechaVuelta: any;  // lo mismo aqui
+
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     
   }
 
@@ -82,5 +81,15 @@ export class ReservasPage {
       })
     }
   }
+
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+ 
   
 }
