@@ -11,4 +11,6 @@ import { ReservasPage } from './reservas';
     IonicPageModule.forChild(ReservasPage),
   ],
 })
+
 export class ReservasPageModule {}
+
