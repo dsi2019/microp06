@@ -9,12 +9,15 @@
 
 <ion-content padding>
   <ion-card>
-      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <!-- Est aparte me da errores -->
+
+
+      <!--ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
       <ion-list>
         <ion-item *ngFor="let item of items">
           {{ item }}
         </ion-item>
-      </ion-list>
+      </ion-list-->
     <ion-card-header>
       <ion-card-title> Seleciona tu destino </ion-card-title>
       
@@ -22,7 +25,7 @@
     <ion-card-content>
       <ion-card>
         <ion-item>
-          <ion-textarea placeholder="Destino"></ion-textarea>
+          <ion-input placeholder="Destino"></ion-input>
         </ion-item>
       </ion-card>
     </ion-card-content>
@@ -51,9 +54,5 @@
     </div>
   </ion-card>
   <ion-content></ion-content>
-  <ion-footer>
-      <ion-toolbar>
-        <ion-title>DSI AirLines</ion-title>
-      </ion-toolbar>
-    </ion-footer>
+  
 </ion-content>
