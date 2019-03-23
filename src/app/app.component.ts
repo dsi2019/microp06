@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ReservasPage } from '../pages/reservas/reservas';
 import { MisVuelosPage } from '../pages/mis-vuelos/mis-vuelos';
 import { TarjetasPage } from '../pages/tarjetas/tarjetas';
+import { InfoPage } from '../pages/info/info';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +27,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Reservas', component: ReservasPage },
       { title: 'Mis Vuelos', component: MisVuelosPage},
-      { title: 'Tarjetas', component: TarjetasPage}
+      { title: 'Tarjetas', component: TarjetasPage},
+      { title: 'Información', component: InfoPage}
     ];
 
   }

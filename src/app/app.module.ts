@@ -11,6 +11,7 @@ import { ReservasPage } from '../pages/reservas/reservas';
 import { MisVuelosPage } from '../pages/mis-vuelos/mis-vuelos';
 import { TarjetasPage } from '../pages/tarjetas/tarjetas';
 import {UnaTarjetaPage} from '../pages/una-tarjeta/una-tarjeta';
+import { InfoPage } from '../pages/info/info';
 
 import {VueloService} from '../services/vuelo.service'
 
@@ -21,7 +22,8 @@ import {VueloService} from '../services/vuelo.service'
     ReservasPage,
     MisVuelosPage,
     TarjetasPage,
-    UnaTarjetaPage
+    UnaTarjetaPage,
+    InfoPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import {VueloService} from '../services/vuelo.service'
     ReservasPage,
     MisVuelosPage,
     TarjetasPage,
-    UnaTarjetaPage
+    UnaTarjetaPage,
+    InfoPage
   ],
   providers: [
     StatusBar,
