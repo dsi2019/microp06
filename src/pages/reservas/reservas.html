@@ -7,14 +7,15 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-card>
+<ion-content>
+  
       <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
       <ion-list>
         <ion-item *ngFor="let item of items">
           {{ item }}
         </ion-item>
       </ion-list>
+  <ion-card>
     <ion-card-header>
       <ion-card-title> Seleciona tu destino </ion-card-title>
       
