@@ -3,27 +3,46 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Reservas</ion-title>
+    <ion-title>Reservas   <ion-icon name="plane"></ion-icon></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <!-- Default textarea -->
-  
 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Seleciona tu destino </ion-card-title>
+      
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card>
+        <ion-item>
+          <ion-textarea placeholder="Destino"></ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
 
-  <!-- Textarea in an item with a placeholder -->
-  <ion-item>
-    <ion-textarea placeholder="Destino"></ion-textarea>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Ida</ion-label>
-    <ion-datetime display-format="MMM DD, YYYY HH:mm"  ></ion-datetime>
-  </ion-item>
-  <ion-item>
-    <ion-label>Vuelta</ion-label>
-    <ion-datetime display-format="MMM DD, YYYY HH:mm"  ></ion-datetime>
-  </ion-item>
-  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Selecciona tus fechas</ion-card-title>
+      
+    </ion-card-header>
+      <ion-card>
+          <ion-item>
+            <ion-label>Ida  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
+            <ion-datetime display-format="MMM DD, YYYY HH:mm"  ></ion-datetime>
+          </ion-item>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-label>Vuelta  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
+          <ion-datetime display-format="MMM DD, YYYY HH:mm"  ></ion-datetime>
+        </ion-item>
+      </ion-card>
+    
+    <div width="auto">
+      <button ion-button color="success" width="auto">Buscar</button>
+    </div>
+  </ion-card>
 </ion-content>
