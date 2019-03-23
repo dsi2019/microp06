@@ -18,16 +18,21 @@
         </ion-item>
       </ion-list-->
     <ion-card-header>
-      <ion-card-title color="light"> Seleciona tu destino </ion-card-title>
+      <ion-card-title color="light"> Seleciona tu origen y destino </ion-card-title>
     </ion-card-header>
 
       <ion-card>
         <ion-item>
-          <ion-label floating >Destino</ion-label>
-          <ion-input type="text" [(ngModel)] = "userDestino"></ion-input>
+          <ion-label floating >Origen</ion-label>
+          <ion-input type="text" [(ngModel)] = "userOrigen"></ion-input>
         </ion-item>
       </ion-card>
-
+      <ion-card>
+          <ion-item>
+            <ion-label floating >Destino</ion-label>
+            <ion-input type="text" [(ngModel)] = "userDestino"></ion-input>
+          </ion-item>
+        </ion-card>
   </ion-card>
 
   <ion-card>

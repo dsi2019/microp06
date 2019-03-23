@@ -12,6 +12,7 @@ export class ReservasPage {
   searchQuery: string = '';
   items: string[];
   userDestino: string;
+  userOrigen: string;
   userFechaIda: any; // any porque no se que tipo de dato es
   userFechaVuelta: any;  // lo mismo aqui
 
