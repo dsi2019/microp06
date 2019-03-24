@@ -3,16 +3,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-una-tarjeta',
-  templateUrl: 'una-tarjeta.html',
+  selector: 'page-una-reserva',
+  templateUrl: 'una-reserva.html',
 })
-export class UnaTarjetaPage {
+export class UnaReservaPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad UnaTarjetaPage');
+    console.log('ionViewDidLoad UnaReservaPage');
   }
 
 }

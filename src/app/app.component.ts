@@ -7,11 +7,9 @@ import { HomePage } from '../pages/home/home';
 import { ReservasPage } from '../pages/reservas/reservas';
 import { MisVuelosPage } from '../pages/mis-vuelos/mis-vuelos';
 import { TarjetasPage } from '../pages/tarjetas/tarjetas';
-import {CheckinPage} from '../pages/checkin/checkin'; 
+import {CheckinPage} from '../pages/checkin/checkin';
 import { InfoPage } from '../pages/info/info';
 import { WebPage } from '../pages/web/web';
-
-import { Vuelo } from '../models/vuelo.model';
 
 @Component({
   templateUrl: 'app.html'
@@ -20,13 +18,6 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = HomePage;
   pages: Array<{title: string, component: any}>;
-
-  public coches:Array<Vuelo>=[
-    new Vuelo("Ryanair", "", "Madrid", "Paris", "6:30", "9:00", new Date(2019-3-25), "11:00", "13:30", new Date(2019-3-27), 93),
-    new Vuelo("Ryanair", "", "Madrid", "Paris", "6:30", "9:00", new Date(2019-3-25), "14:00", "16:30", new Date(2019-3-27), 96),
-    new Vuelo("Ryanair", "", "Madrid", "Paris", "8:30", "11:00", new Date(2019-3-25), "11:00", "13:30", new Date(2019-3-27), 96),
-    new Vuelo("Ryanair", "", "Madrid", "Paris", "10:00", "12:30", new Date(2019-3-25), "14:00", "16:30", new Date(2019-3-27), 90),
-  ];
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();

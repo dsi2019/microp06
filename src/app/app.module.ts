@@ -15,16 +15,18 @@ import { InfoPage } from '../pages/info/info';
 import { WebPage } from '../pages/web/web';
 import { CheckinPage } from '../pages/checkin/checkin';
 import {VueloService} from '../services/vuelo.service'
+import { UnaReservaPage } from '../pages/una-reserva/una-reserva';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ReservasPage,
+    UnaReservaPage,
     MisVuelosPage,
     TarjetasPage,
     UnaTarjetaPage,
-	CheckinPage,
+	  CheckinPage,
     InfoPage,
     WebPage
   ],
@@ -37,10 +39,11 @@ import {VueloService} from '../services/vuelo.service'
     MyApp,
     HomePage,
     ReservasPage,
+    UnaReservaPage,
     MisVuelosPage,
     TarjetasPage,
     UnaTarjetaPage,
-	CheckinPage,
+	  CheckinPage,
     InfoPage,
     WebPage
   ],
