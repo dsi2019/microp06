@@ -6,10 +6,29 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>checkin</ion-title>
+      <button ion-button menuToggle>
+	  <ion-icon name = "menu" ></ion-icon >
+    </button >
+    <ion-title>Check-In</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+<form >
+<ion-list >
+<ion-item >
+<ion-label > Nombre </ion-label >
+<ion-input type = "text" name = "nombre" ></ion-input >
+</ion-item >
+<ion-item >
+<ion-label > Passport </ion-label >
+<ion-input type = "text" name = "organizacion"></ion-input >
+</ion-item >
+<ion-item >
+<ion-label > Numero </ion-label >
+<ion-input type = "text" name = "numero" ></ion-input >
+</ion-item >
+</ion-list >
+<button ion-button block type = "submit" > Aceptar </button >
+</form >
 </ion-content>
