@@ -10,11 +10,11 @@ import { HomePage } from '../pages/home/home';
 import { ReservasPage } from '../pages/reservas/reservas';
 import { MisVuelosPage } from '../pages/mis-vuelos/mis-vuelos';
 import { TarjetasPage } from '../pages/tarjetas/tarjetas';
-import {UnaTarjetaPage} from '../pages/una-tarjeta/una-tarjeta';
+import { UnaTarjetaPage } from '../pages/una-tarjeta/una-tarjeta';
 import { InfoPage } from '../pages/info/info';
 import { WebPage } from '../pages/web/web';
 import { CheckinPage } from '../pages/checkin/checkin';
-import {VueloService} from '../services/vuelo.service'
+import { VueloService } from '../services/vuelo.service'
 import { UnaReservaPage } from '../pages/una-reserva/una-reserva';
 
 @NgModule({
