@@ -20,37 +20,40 @@
     <ion-card-header>
       <ion-card-title> Seleciona tu origen y destino </ion-card-title>
     </ion-card-header>
-      <ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-label floating >Origen</ion-label>
+        <ion-input type="text" [(ngModel)] = "userOrigen"></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card>
         <ion-item>
-          <ion-label floating >Origen</ion-label>
-          <ion-input type="text" [(ngModel)] = "userOrigen"></ion-input>
+          <ion-label floating >Destino</ion-label>
+          <ion-input type="text" [(ngModel)] = "userDestino"></ion-input>
         </ion-item>
       </ion-card>
-      <ion-card>
-          <ion-item>
-            <ion-label floating >Destino</ion-label>
-            <ion-input type="text" [(ngModel)] = "userDestino"></ion-input>
-          </ion-item>
-        </ion-card>
   </ion-card>
 
   <ion-card>
     <ion-card-header>
       <ion-card-title>Selecciona tus fechas</ion-card-title>
     </ion-card-header>
-      <ion-card>
-          <ion-item>
-            <ion-label floating>Ida  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
-            <ion-datetime display-format="MMM DD, YYYY HH:mm"  [(ngModel)] = "userFechaIda"></ion-datetime>
-          </ion-item>
-      </ion-card>
-      <ion-card>
+
+    <ion-card>
         <ion-item>
-          <ion-label floating>Vuelta  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
-          <ion-datetime display-format="MMM DD, YYYY HH:mm" [(ngModel)] = "userFechaVuelta"></ion-datetime>
+          <ion-label floating>Ida  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
+          <ion-datetime display-format="MMM DD, YYYY HH:mm"  [(ngModel)] = "userFechaIda"></ion-datetime>
         </ion-item>
-      </ion-card>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+        <ion-label floating>Vuelta  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
+        <ion-datetime display-format="MMM DD, YYYY HH:mm" [(ngModel)] = "userFechaVuelta"></ion-datetime>
+      </ion-item>
+    </ion-card>
       <button ion-button color="success" (click) ="showAlert()">Buscar</button>
   </ion-card>
+
   <ion-content></ion-content>
 </ion-content>
