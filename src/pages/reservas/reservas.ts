@@ -16,9 +16,8 @@ export class ReservasPage {
   userFechaIda: any; // any porque no se que tipo de dato es
   userFechaVuelta: any;  // lo mismo aqui
 
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
-    
+    constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+
   }
 
   ionViewDidLoad() {
@@ -91,6 +90,4 @@ export class ReservasPage {
     });
     alert.present();
   }
- 
-  
 }

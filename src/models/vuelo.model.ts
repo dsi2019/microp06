@@ -1,10 +1,9 @@
-
 export interface Vuelo {
    aerolínea:string;
    aerolínea_foto:string;
    inicio:string;
    destino:string;
-   
+
    ida_inicio_hora:string;
    ida_destino_hora:string;
    ida_fecha:Date;
