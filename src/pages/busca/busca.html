@@ -6,7 +6,7 @@
 
 <ion-content padding>
   <ion-list>
-      <button ion-item *ngFor="let vuelo of vuelos">
+      <button ion-item *ngFor="let vuelo of vuelos" (click) =onAddVuelo()>
         <p><strong>Aerolinea: </strong>{{vuelo.aerolinea}}</p>
         <p><strong>Inicio: </strong>{{vuelo.inicio}}</p>
         <p><strong>Destino: </strong>{{vuelo.destino}}</p>
