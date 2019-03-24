@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding>
-  <table border='1px' width='700px'>
+  <!-- <table border='1px' width='700px'>
     <thead>
       <td align='left'>Aerolinea</td>
       <td align='left'>Inicio</td>
@@ -26,5 +26,18 @@
       <td align='left'>{{vuelos[id].vuelta_fecha | date:'dd-mm-yyyy'}}</td>
       <td align='right'>{{vuelos[id].precio | number:'1.0-0'}}€</td>
     </tr>
-  </table>
+  </table> -->
+  <ion-list>
+      <button ion-item *ngFor="let vuelo of vuelos">
+      <p><strong>Aerolinea: </strong>{{vuelo.aerolinea}}</p>
+      <p><strong>Inicio: </strong>{{vuelo.inicio}}</p>
+      <p><strong>Destino: </strong>{{vuelo.destino}}</p>
+      <p><strong>Fecha de Ida: </strong>{{vuelos.vuelta_fecha}}</p>
+      <p><strong>Hora de Inicia: </strong>{{vuelo.ida_incio_hora}}</p>
+      <p><strong>Fecha de Vuelta: </strong>{{vuelos.vuelta_fecha}}</p>
+      <p><strong>Hora de Vuelta: </strong>{{vuelos.vuelta_fecha}}</p>
+      <p><strong>Precio: </strong>{{vuelo.precio}}</p>
+      </button>
+  </ion-list>
+
 </ion-content>
