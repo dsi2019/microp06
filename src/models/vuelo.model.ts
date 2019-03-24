@@ -1,16 +1,40 @@
-export interface Vuelo {
-   aerolínea:string;
-   aerolínea_foto:string;
-   inicio:string;
-   destino:string;
+export class Vuelo {
+   public aerolinea:string;
+   public aerolinea_foto:string;
+   public inicio:string;
+   public destino:string;
 
-   ida_inicio_hora:string;
-   ida_destino_hora:string;
-   ida_fecha:Date;
+   public ida_inicio_hora:string;
+   public ida_destino_hora:string;
+   public ida_fecha:Date;
 
-   vuelta_inicio_hora:string;
-   vuelta_destino_hora:string;
-   vuelta_fecha:Date;
+   public vuelta_inicio_hora:string;
+   public vuelta_destino_hora:string;
+   public vuelta_fecha:Date;
 
-   precio:number;
+   public precio:number;
+
+   constructor(aerolinea:string,
+      aerolinea_foto:string,
+      inicio:string,
+      destino:string,
+      ida_inicio_hora:string,
+      ida_destino_hora:string,
+      ida_fecha:Date,
+      vuelta_inicio_hora:string,
+      vuelta_destino_hora:string,
+      vuelta_fecha:Date,
+      precio:number) {
+         this.aerolinea = aerolinea;
+         this.aerolinea_foto = aerolinea_foto;
+         this.inicio = inicio;
+         this.destino = destino;
+         this.ida_inicio_hora = ida_inicio_hora;
+         this.ida_destino_hora = ida_destino_hora;
+         this.ida_fecha = ida_fecha;
+         this.vuelta_inicio_hora = vuelta_inicio_hora;
+         this.vuelta_destino_hora = vuelta_destino_hora;
+         this.vuelta_fecha = vuelta_fecha;
+         this.precio = precio;
+      }
    }
