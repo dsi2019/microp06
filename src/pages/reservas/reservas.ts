@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { VueloService } from '../../services/vuelo.service';
 import { BuscaPage } from '../busca/busca';
 
 @IonicPage()
@@ -16,7 +15,7 @@ export class ReservasPage {
   userFechaIda: Date;
   userFechaVuelta: Date;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private vueloService: VueloService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
 
   }
 
@@ -83,6 +82,5 @@ export class ReservasPage {
 
   onBuscar(){
     this.navCtrl.push(BuscaPage);
-    this.vueloService.getVuelos();
   }
 }

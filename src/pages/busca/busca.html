@@ -5,5 +5,26 @@
 </ion-header>
 
 <ion-content padding>
-
+  <table border='1px' width='700px'>
+    <thead>
+      <td align='left'>Aerolinea</td>
+      <td align='left'>Inicio</td>
+      <td align='left'>Destino</td>
+      <td align='left'>Hora del Vuelo de Ida</td>
+      <td align='left'>Fecha del Vuelo de Ida</td>
+      <td align='left'>Hora del Vuelo de Vuelta</td>
+      <td align='left'>Fecha del Vuelo de Vuelta</td>
+      <td align='right'>Precio</td>
+    </thead>
+    <tr *ngFor='let id of filterVuelos(); let i=index'>
+      <td align='left'>{{vuelos[id].aerolinea}}</td>
+      <td align='left'>{{vuelos[id].inicio}}</td>
+      <td align='left'>{{vuelos[id].destino}}</td>
+      <td align='left'>{{vuelos[id].ida_inicio_hora}} - {{vuelos[id].ida_destino_hora}}</td>
+      <td align='left'>{{vuelos[id].ida_fecha | date:'dd-mm-yyyy'}}</td>
+      <td align='left'>{{vuelos[id].vuelta_inicio_hora}} - {{vuelos[id].vuelta_destino_hora}}</td>
+      <td align='left'>{{vuelos[id].vuelta_fecha | date:'dd-mm-yyyy'}}</td>
+      <td align='right'>{{vuelos[id].precio | number:'1.0-0'}}€</td>
+    </tr>
+  </table>
 </ion-content>
