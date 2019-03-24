@@ -1,17 +1,55 @@
 import { Vuelo } from "../models/vuelo.model";
 
 export class VueloService{
-    private vuelos:Array<Vuelo>=[
-        new Vuelo("Ryanair", "", "Madrid", "Paris", "6:30", "9:00", new Date(2019,3,25), "11:00", "13:30", new Date(2019,3,27), 93),
-        new Vuelo("British Airways", "", "Madrid", "Paris", "6:30", "9:00", new Date(2019,3,25), "14:00", "16:30", new Date(2019,3,27), 96),
-        new Vuelo("British Airways", "", "Madrid", "Paris", "8:30", "11:00", new Date(2019,3,25), "11:00", "13:30", new Date(2019,3,27), 96),
-        new Vuelo("Iberia", "", "Madrid", "Paris", "10:00", "12:30", new Date(2019,3,25), "14:00", "16:30", new Date(2019,3,27), 90),
-    ];
+    private vuelos: Vuelo[] =[
+        {
+            "aerolinea":"British Airways",
+            "aerolinea_foto":"#",
+            "inicio":"Madrid",
+            "destino":"Paris",
+            "ida_inicio_hora":"16:30",
+            "ida_destino_hora":"18:30",
+            "ida_fecha": new Date​(​2019,​10​,​1​),
+            "vuelta_inicio_hora": "16:30",
+            "vuelta_destino_hora": "18:30",
+            "vuelta_fecha": new Date(2019,10,2),
+            "precio": 150
+        },
+        {
+            "aerolinea":"British Airways",
+            "aerolinea_foto":"#",
+            "inicio":"Madrid",
+            "destino":"Paris",
+            "ida_inicio_hora":"12:30",
+            "ida_destino_hora":"14:30",
+            "ida_fecha": new Date​(​2019,​10​,​1​),
+            "vuelta_inicio_hora": "16:30",
+            "vuelta_destino_hora": "18:30",
+            "vuelta_fecha": new Date(2019,10,2),
+            "precio": 199
+        },
+        {
+            "aerolinea":"Ibería",
+            "aerolinea_foto":"#",
+            "inicio":"Madrid",
+            "destino":"Paris",
+            "ida_inicio_hora":"10:30",
+            "ida_destino_hora":"12:30",
+            "ida_fecha": new Date​(​2019,​10​,​1​),
+            "vuelta_inicio_hora": "12:30",
+            "vuelta_destino_hora": "15:30",
+            "vuelta_fecha": new Date(2019,10,2),
+            "precio": 300}
+        ];
 
     constructor(){
     }
 
     getVuelos(){
         return this.vuelos;
+    }
+
+    addVuelo(value: Vuelo) {
+        this
     }
 }
