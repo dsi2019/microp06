@@ -8,6 +8,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ReservasPage } from '../pages/reservas/reservas';
+import { BuscaPage } from '../pages/busca/busca';
 import { MisVuelosPage } from '../pages/mis-vuelos/mis-vuelos';
 import { TarjetasPage } from '../pages/tarjetas/tarjetas';
 import { UnaTarjetaPage } from '../pages/una-tarjeta/una-tarjeta';
@@ -21,6 +22,7 @@ import { UnaReservaPage } from '../pages/una-reserva/una-reserva';
     MyApp,
     HomePage,
     ReservasPage,
+    BuscaPage,
     UnaReservaPage,
     MisVuelosPage,
     TarjetasPage,
@@ -37,6 +39,7 @@ import { UnaReservaPage } from '../pages/una-reserva/una-reserva';
     MyApp,
     HomePage,
     ReservasPage,
+    BuscaPage,
     UnaReservaPage,
     MisVuelosPage,
     TarjetasPage,

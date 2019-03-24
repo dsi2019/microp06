@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { VueloService } from '../../services/vuelo.service';
-
+import { BuscaPage } from '../busca/busca';
 
 @IonicPage()
 @Component({
@@ -13,10 +13,10 @@ export class ReservasPage {
   items: string[];
   userDestino: string;
   userOrigen: string;
-  userFechaIda: any; // any porque no se que tipo de dato es
-  userFechaVuelta: any;  // lo mismo aqui
+  userFechaIda: Date;
+  userFechaVuelta: Date;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private vueloService: VueloService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private vueloService: VueloService) {
 
   }
 
@@ -63,7 +63,6 @@ export class ReservasPage {
       'Tokio',
       'Uelzen',
       'Washington'
-
       ];
     }
 
@@ -82,16 +81,8 @@ export class ReservasPage {
     }
   }
 
-  onBuscar(value: {}){
+  onBuscar(){
     this.vueloService.getVuelos();
-  }
-
-  showAlert() {
-    const alert = this.alertCtrl.create({
-      title: 'New Friend!',
-      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
-      buttons: ['OK']
-    });
-    alert.present();
+    this.navCtrl.push(BuscaPage);
   }
 }
