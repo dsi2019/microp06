@@ -82,7 +82,7 @@ export class ReservasPage {
   }
 
   onBuscar(){
-    this.vueloService.getVuelos();
     this.navCtrl.push(BuscaPage);
+    this.vueloService.getVuelos();
   }
 }
