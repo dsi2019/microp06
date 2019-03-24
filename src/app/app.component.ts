@@ -9,7 +9,6 @@ import { MisVuelosPage } from '../pages/mis-vuelos/mis-vuelos';
 import { TarjetasPage } from '../pages/tarjetas/tarjetas';
 import {CheckinPage} from '../pages/checkin/checkin';
 import { InfoPage } from '../pages/info/info';
-import { WebPage } from '../pages/web/web';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,8 +28,7 @@ export class MyApp {
       { title: 'Mis Vuelos', component: MisVuelosPage},
       { title: 'Check-In', component: CheckinPage},
       { title: 'Tarjetas', component: TarjetasPage},
-      { title: 'Información', component: InfoPage},
-      { title: 'Web', component: WebPage}
+      { title: 'Información', component: InfoPage}
     ];
 
   }
@@ -48,5 +46,9 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  openSite() {
+    window.open('https://google.com');
   }
 }
