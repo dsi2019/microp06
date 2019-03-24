@@ -11,6 +11,7 @@ import { Vuelo } from '../../models/vuelo.model';
 export class BuscaPage {
 
   vuelos: Vuelo[] =[];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private vueloService: VueloService) {
   }
 
@@ -21,9 +22,4 @@ export class BuscaPage {
   ionViewWillEnter(){
     this.vuelos = this.vueloService.getVuelos();
   };
-
-
-  filterVuelos() {
-    this.vueloService.getVuelos();
-  }
 }
