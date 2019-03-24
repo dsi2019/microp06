@@ -10,10 +10,10 @@
         <p><strong>Aerolinea: </strong>{{vuelo.aerolinea}}</p>
         <p><strong>Inicio: </strong>{{vuelo.inicio}}</p>
         <p><strong>Destino: </strong>{{vuelo.destino}}</p>
-        <p><strong>Fecha de Ida: </strong>{{vuelo.vuelta_fecha}}</p>
-        <p><strong>Hora de Inicia: </strong>{{vuelo.ida_incio_hora}} - {{vuelo.ida_destino_hora}}</p>
-        <p><strong>Fecha de Vuelta: </strong>{{vuelo.vuelta_fecha}}</p>
-        <p><strong>Hora de Vuelta: </strong>{{vuelo.vuelta_incio_hora}} - {{vuelo.vuelta_destino_hora}}</p>
+        <p><strong>Fecha de Ida: </strong>{{vuelo.vuelta_fecha | date:'dd/MM/yy'}}</p>
+        <p><strong>Hora de Inicia: </strong>{{vuelo.ida_inicio_hora}} - {{vuelo.ida_destino_hora}}</p>
+        <p><strong>Fecha de Vuelta: </strong>{{vuelo.vuelta_fecha | date:'dd/MM/yy'}}</p>
+        <p><strong>Hora de Vuelta: </strong>{{vuelo.vuelta_inicio_hora}} - {{vuelo.vuelta_destino_hora}}</p>
         <p><strong>Precio: </strong>{{vuelo.precio}}€</p>
       </button>
   </ion-list>
