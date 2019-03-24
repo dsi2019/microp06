@@ -13,5 +13,5 @@ export class VueloService{
 
     getVuelos(){
         return this.vuelos;
-        }
+    }
 }
