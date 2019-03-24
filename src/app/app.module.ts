@@ -13,7 +13,7 @@ import { TarjetasPage } from '../pages/tarjetas/tarjetas';
 import {UnaTarjetaPage} from '../pages/una-tarjeta/una-tarjeta';
 import { InfoPage } from '../pages/info/info';
 import { WebPage } from '../pages/web/web';
-
+import { checkinPage } from '../pages/checkin/checkin';
 import {VueloService} from '../services/vuelo.service'
 
 @NgModule({
@@ -24,6 +24,7 @@ import {VueloService} from '../services/vuelo.service'
     MisVuelosPage,
     TarjetasPage,
     UnaTarjetaPage,
+	checkinPage,
     InfoPage,
     WebPage
   ],
@@ -39,6 +40,7 @@ import {VueloService} from '../services/vuelo.service'
     MisVuelosPage,
     TarjetasPage,
     UnaTarjetaPage,
+	checkinPage,
     InfoPage,
     WebPage
   ],
