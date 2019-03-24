@@ -34,9 +34,7 @@
           <ion-input type="text" [(ngModel)] = "userDestino" [ngModelOptions]="{standalone: true}"></ion-input>
         </ion-item>
       </ion-card>
-  </ion-card>
 
-  <ion-card>
     <ion-card-header>
       <ion-card-title>Selecciona tus fechas</ion-card-title>
     </ion-card-header>
@@ -44,7 +42,7 @@
     <ion-card>
         <ion-item>
           <ion-label floating>Ida  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
-          <ion-datetime display-format="MMM DD, YYYY HH:mm"  [(ngModel)] = "userFechaIda" 
+          <ion-datetime display-format="MMM DD, YYYY HH:mm"  [(ngModel)] = "userFechaIda"
           [ngModelOptions]="{standalone: true}"></ion-datetime>
         </ion-item>
     </ion-card>
@@ -55,7 +53,8 @@
         [ngModelOptions]="{standalone: true}"></ion-datetime>
       </ion-item>
     </ion-card>
-      <button ion-button color="success" (click) ="onBuscar()">Buscar</button>
+    <br>
+    <button ion-button color="success" (click) ="onBuscar()">Buscar</button>
   </ion-card>
   </form>
 </ion-content>
