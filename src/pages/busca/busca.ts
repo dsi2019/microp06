@@ -22,4 +22,8 @@ export class BuscaPage {
   ionViewWillEnter(){
     this.vuelos = this.vueloService.getVuelos();
   };
+
+  onAddVuelo(value: Vuelo){
+    this.vueloService.addtoMisVuelos(value);
+  }
 }

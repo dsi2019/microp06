@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { VueloService } from '../../services/vuelo.service';
+import { Vuelo } from '../../models/vuelo.model';
 
 @IonicPage()
 @Component({
@@ -8,11 +10,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MisVuelosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  misVuelos: Vuelo[] =[];
+  constructor(public navCtrl: NavController, public navParams: NavParams, private vueloService: VueloService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MisVuelosPage');
   }
 
+  ionViewWillEnter(){
+    this.misVuelos = this.vueloService.getMisVuelos();
+  };
 }
