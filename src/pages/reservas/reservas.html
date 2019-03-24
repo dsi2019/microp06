@@ -9,6 +9,7 @@
 
 
 <ion-content padding class="mainScreen">
+    <form (ngSubmit)="onBuscar(f.value)" #f="ngForm">
   <ion-card>
     <!-- Est aparte me da errores -->
       <!--ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
@@ -24,13 +25,13 @@
     <ion-card>
       <ion-item>
         <ion-label floating >Origen</ion-label>
-        <ion-input type="text" [(ngModel)] = "userOrigen"></ion-input>
+        <ion-input type="text" [(ngModel)] = "userOrigen" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
     </ion-card>
     <ion-card>
         <ion-item>
           <ion-label floating >Destino</ion-label>
-          <ion-input type="text" [(ngModel)] = "userDestino"></ion-input>
+          <ion-input type="text" [(ngModel)] = "userDestino" [ngModelOptions]="{standalone: true}"></ion-input>
         </ion-item>
       </ion-card>
   </ion-card>
@@ -43,17 +44,18 @@
     <ion-card>
         <ion-item>
           <ion-label floating>Ida  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
-          <ion-datetime display-format="MMM DD, YYYY HH:mm"  [(ngModel)] = "userFechaIda"></ion-datetime>
+          <ion-datetime display-format="MMM DD, YYYY HH:mm"  [(ngModel)] = "userFechaIda" 
+          [ngModelOptions]="{standalone: true}"></ion-datetime>
         </ion-item>
     </ion-card>
     <ion-card>
       <ion-item>
         <ion-label floating>Vuelta  <ion-icon name="ios-calendar-outline"></ion-icon></ion-label>
-        <ion-datetime display-format="MMM DD, YYYY HH:mm" [(ngModel)] = "userFechaVuelta"></ion-datetime>
+        <ion-datetime display-format="MMM DD, YYYY HH:mm" [(ngModel)] = "userFechaVuelta"
+        [ngModelOptions]="{standalone: true}"></ion-datetime>
       </ion-item>
     </ion-card>
-      <button ion-button color="success" (click) ="showAlert()">Buscar</button>
+      <button ion-button color="success" (click) ="onBuscar()">Buscar</button>
   </ion-card>
-
-  <ion-content></ion-content>
+  </form>
 </ion-content>
