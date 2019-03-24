@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-
+import { VueloService } from '../../services/vuelo.service';
 
 
 @IonicPage()
@@ -16,7 +16,7 @@ export class ReservasPage {
   userFechaIda: any; // any porque no se que tipo de dato es
   userFechaVuelta: any;  // lo mismo aqui
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+    constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private vueloService: VueloService) {
 
   }
 
@@ -80,6 +80,10 @@ export class ReservasPage {
         return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
+  }
+
+  onBuscar(value: {}){
+    this.vueloService.getVuelos();
   }
 
   showAlert() {
