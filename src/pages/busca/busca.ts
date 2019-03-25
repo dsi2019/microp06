@@ -25,5 +25,6 @@ export class BuscaPage {
 
   onAddVuelo(value: Vuelo, i){
     this.vueloService.addtoMisVuelos(value, i);
+    this,this.navCtrl.pop();
   }
 }
