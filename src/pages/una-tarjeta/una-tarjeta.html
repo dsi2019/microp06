@@ -7,10 +7,7 @@
 <ion-content padding>
   <ion-card *ngFor="let vuelo of tarjeta">
       <ion-item *ngFor="let dato of datos">
-        <h1>Tu Informacion:</h1>
         <h2>Nombre: <strong>{{dato.nombre}}</strong></h2>
-        <h2>Numero de Pasaporte: <strong>{{dato.pasaporte}}</strong></h2>
-        <h2>Numero de Telefono de Emergencia: <strong>{{dato.telefono}}</strong></h2>
       </ion-item>
 
       <ion-item>
@@ -22,6 +19,9 @@
         <!-- Add data-values for date -->
         <p> {{vuelo.ida_fecha | date:'dd/MM/yy'}}</p>
         <!-- Add data-values for seat -->
+        <p>Puerta de Embarque: 51</p>
+        <p>Grupo de Embarque: 2</p>
+        <p>Hora de Embarque: 30 Minutos Antes del Vuelo</p>
         <p> Asiento: 12A</p>
       </ion-item>
 
@@ -43,6 +43,9 @@
         <!-- Add data-values for date -->
         <p> {{vuelo.vuelta_fecha | date:'dd/MM/yy'}}</p>
         <!-- Add data-values for seat -->
+        <p>Puerta de Embarque: 32</p>
+        <p>Grupo de Embarque: 3</p>
+        <p>Hora de Embarque: 30 Minutos Antes del Vuelo</p>
         <p> Asiento: 14E</p>
       </ion-item>
 
