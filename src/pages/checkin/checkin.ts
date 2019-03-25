@@ -22,4 +22,8 @@ export class CheckinPage {
     console.log('ionViewDidLoad CheckinPage');
   }
 
+  onSubmitCheckIn(){
+    this.navCtrl.pop();
+  }
+
 }

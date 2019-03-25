@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VueloService } from '../../services/vuelo.service';
 import { Vuelo } from '../../models/vuelo.model';
+import { CheckinPage } from '../checkin/checkin';
 
 @IonicPage()
 @Component({
@@ -22,4 +23,8 @@ export class MisVuelosPage {
   ionViewWillEnter(){
     this.misVuelos = this.vueloService.getMisVuelos();
   };
+
+  onStartCheckIn(){
+    this.navCtrl.push(CheckinPage);
+  }
 }
