@@ -25,7 +25,7 @@ export class MisVuelosPage {
   };
 
   onStartCheckIn(value: Vuelo, i) {
-    this.vueloService.setCurrentVuelo(value, i)
+    this.vueloService.setCurrentVuelo(value, i);
     this.navCtrl.push(CheckinPage);
   }
 }

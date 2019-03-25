@@ -1,5 +1,5 @@
 import { Vuelo } from "../models/vuelo.model";
-import { Datos } from "../app/datos";
+import { Datos } from "../models/datos.model";
 
 export class VueloService{
 
@@ -51,7 +51,6 @@ export class VueloService{
         private currentIndex: any;
         private currentDatos: Datos;
 
-
     constructor(){
     }
 
@@ -64,11 +63,14 @@ export class VueloService{
         this.vuelos.splice(i,1);
     }
 
-    addtoMisTarjetas(value: Vuelo, datos, i) {
+    addtoMisTarjetas(value: Vuelo, i) {
         this.mis_tarjetas.push(value);
-        this.tarjetas_datos.push(datos);
         this.mis_vuelos.splice(i,1);
         this.setCurrentVuelo(null, null);
+    }
+
+    addtoMisDatos(value: Datos) {
+        this.tarjetas_datos.push(value);
     }
 
     setCurrentVuelo(value: Vuelo, i) {
