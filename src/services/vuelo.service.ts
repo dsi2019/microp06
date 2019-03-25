@@ -78,8 +78,8 @@ export class VueloService{
         this.currentIndex = i;
     }
 
-    setCurrentDatos(i) {
-        this.currentDatos = this.tarjetas_datos[i];
+    setCurrentDatos(value: Datos) {
+        this.currentDatos = value;
     }
 
     getCurrentVuelo() {

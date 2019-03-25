@@ -7,6 +7,10 @@
 <ion-content padding>
   <ion-card *ngFor="let vuelo of tarjeta">
       <ion-item *ngFor="let dato of datos">
+        <h1>Tu Informacion:</h1>
+        <h2>Nombre: <strong>{{dato.nombre}}</strong></h2>
+        <h2>Numero de Pasaporte: <strong>{{dato.pasaporte}}</strong></h2>
+        <h2>Numero de Telefono de Emergencia: <strong>{{dato.telefono}}</strong></h2>
       </ion-item>
 
       <ion-item>
