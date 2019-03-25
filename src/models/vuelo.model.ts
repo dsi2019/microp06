@@ -1,5 +1,3 @@
-import { Datos } from "../app/datos";
-
 export interface Vuelo {
    aerolinea:string;
    aerolinea_foto:string;

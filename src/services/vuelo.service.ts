@@ -49,7 +49,7 @@ export class VueloService{
         private tarjetas_datos: Datos[] = [];
         private currentVuelo: Vuelo;
         private currentIndex: any;
-        private currentDatos: Datos[] = [];
+        private currentDatos: Datos;
 
 
     constructor(){
@@ -77,7 +77,7 @@ export class VueloService{
     }
 
     setCurrentDatos(i) {
-        this.currentDatos.push(tarjetas_datos[i]);
+        this.currentDatos = this.tarjetas_datos[i];
     }
 
     getCurrentVuelo() {

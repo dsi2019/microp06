@@ -17,8 +17,8 @@
               <ion-item>
                   <ion-icon name="plane" item-start large></ion-icon>
                   <br>
-                  <!-- Add data-values for times -->
                   <h2> {{vuelo.aerolinea}}</h2>
+                  <!-- Add data-values for times -->
                   <h3> {{vuelo.ida_inicio_hora}} - {{vuelo.ida_destino_hora}}</h3>
                   <!-- Add data-values for date -->
                   <p> {{vuelo.ida_fecha | date:'dd/MM/yy'}}</p>
@@ -29,14 +29,11 @@
               <ion-item>
                   <ion-icon name="plane" item-start large></ion-icon>
                   <br>
-                  <!-- Add data-values for times -->
                   <h2> {{vuelo.aerolinea}}</h2>
+                  <!-- Add data-values for times -->
                   <h3> {{vuelo.vuelta_inicio_hora}} - {{vuelo.vuelta_destino_hora}}</h3>
                   <!-- Add data-values for date -->
                   <p> {{vuelo.vuelta_fecha | date:'dd/MM/yy'}}</p>
-              </ion-item>
-              <ion-item>
-                <h2><strong>Precio: </strong>{{vuelo.precio | number:'1.0-0'}}€</h2>
               </ion-item>
           </ion-card>
         </button>
