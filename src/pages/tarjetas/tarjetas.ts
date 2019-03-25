@@ -12,6 +12,7 @@ import { UnaTarjetaPage } from '../una-tarjeta/una-tarjeta';
 export class TarjetasPage {
 
   misTarjetas: Vuelo[] =[];
+  misDatos: Datos[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private vueloService: VueloService) {
   }
@@ -22,10 +23,12 @@ export class TarjetasPage {
 
   ionViewWillEnter(){
     this.misTarjetas = this.vueloService.getMisTarjetas();
+    this.misDatos = this.vueloService.getTarjetasDatos();
   };
 
   onLoadTarjeta(value: Vuelo, i) {
-    this.vueloService.setCurrentTarjeta(value, i)
+    this.vueloService.setCurrentVuelo(value, i);
+    this.vueloService.setCurrentDatos(i);
     this.navCtrl.push(UnaTarjetaPage);
   }
 }

@@ -1,9 +1,9 @@
 export class Datos {
     private nombre:string;
-    private pasaporte:number;
+    private pasaporte:string;
     private telefono:number;
 
-    constructor(nombre:string, pasaporte:number,telefono:number) {
+    constructor(nombre:string, pasaporte:string,telefono:number) {
         this.nombre = nombre;
         this.pasaporte = pasaporte;
         this.telefono = telefono;
@@ -13,7 +13,7 @@ export class Datos {
         return this.nombre;
     }
 
-    public getPasaporte():number {
+    public getPasaporte():string {
         return this.pasaporte;
     }
 

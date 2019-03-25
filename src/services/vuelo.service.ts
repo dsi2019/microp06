@@ -1,4 +1,5 @@
 import { Vuelo } from "../models/vuelo.model";
+import { Datos } from "../app/datos";
 
 export class VueloService{
 
@@ -11,21 +12,21 @@ export class VueloService{
             "ida_inicio_hora":"16:30",
             "ida_destino_hora":"18:30",
             "ida_fecha": new Date​(​2019,​10​,​1​),
-            "vuelta_inicio_hora": "16:30",
-            "vuelta_destino_hora": "18:30",
+            "vuelta_inicio_hora": "11:30",
+            "vuelta_destino_hora": "13:30",
             "vuelta_fecha": new Date(2019,10,2),
             "precio": 150
         },
         {
-            "aerolinea":"British Airways",
+            "aerolinea":"Ryanair",
             "aerolinea_foto":"#",
             "inicio":"Madrid",
             "destino":"Paris",
             "ida_inicio_hora":"12:30",
             "ida_destino_hora":"14:30",
             "ida_fecha": new Date​(​2019,​10​,​1​),
-            "vuelta_inicio_hora": "16:30",
-            "vuelta_destino_hora": "18:30",
+            "vuelta_inicio_hora": "15:30",
+            "vuelta_destino_hora": "17:30",
             "vuelta_fecha": new Date(2019,10,2),
             "precio": 199
         },
@@ -45,10 +46,10 @@ export class VueloService{
 
         private mis_vuelos: Vuelo[] =[];
         private mis_tarjetas: Vuelo[] = [];
+        private tarjetas_datos: Datos[] = [];
         private currentVuelo: Vuelo;
         private currentIndex: any;
-        private currentTarjeta: Vuelo;
-        private currentTarjetaIndex: any;
+        private currentDatos: Datos[] = [];
 
 
     constructor(){
@@ -63,8 +64,9 @@ export class VueloService{
         this.vuelos.splice(i,1);
     }
 
-    addtoMisTarjetas(value: Vuelo, i) {
+    addtoMisTarjetas(value: Vuelo, datos, i) {
         this.mis_tarjetas.push(value);
+        this.tarjetas_datos.push(datos);
         this.mis_vuelos.splice(i,1);
         this.setCurrentVuelo(null, null);
     }
@@ -72,6 +74,10 @@ export class VueloService{
     setCurrentVuelo(value: Vuelo, i) {
         this.currentVuelo = value;
         this.currentIndex = i;
+    }
+
+    setCurrentDatos(i) {
+        this.currentDatos.push(tarjetas_datos[i]);
     }
 
     getCurrentVuelo() {
@@ -82,17 +88,8 @@ export class VueloService{
         return this.currentIndex;
     }
 
-    setCurrentTarjeta(value: Vuelo, i) {
-        this.currentTarjeta = value;
-        this.currentTarjetaIndex = i;
-    }
-
-    getCurrentTarjeta() {
-        return this.currentTarjeta;
-    }
-
-    getCurrentTarjetaIndex() {
-        return this.currentTarjeta;
+    getCurrentDatos() {
+        return this.currentDatos;
     }
 
     getMisVuelos() {
@@ -101,5 +98,9 @@ export class VueloService{
 
     getMisTarjetas() {
         return this.mis_tarjetas;
+    }
+
+    getTarjetasDatos() {
+        return this.tarjetas_datos;
     }
 }

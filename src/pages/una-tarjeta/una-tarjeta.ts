@@ -10,9 +10,9 @@ import { Vuelo } from '../../models/vuelo.model';
   templateUrl: 'una-tarjeta.html',
 })
 export class UnaTarjetaPage {
+  tarjeta: Vuelo[] = [];
+  datos: Datos[] = [];
 
-
-  tarjeta: Vuelo = null;
   constructor(public navCtrl: NavController, public navParams: NavParams, private vueloService: VueloService) {
   }
 
@@ -21,7 +21,8 @@ export class UnaTarjetaPage {
   }
 
   ionViewWillEnter(){
-    this.tarjeta = this.vueloService.getCurrentTarjeta();
+    this.tarjeta.push(this.vueloService.getCurrentVuelo());
+    this.datos.push(this.vueloService.getCurrentDatos());
   };
 
 }

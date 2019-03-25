@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VueloService } from '../../services/vuelo.service';
+import { Vuelo } from '../../models/vuelo.model';
 
 @IonicPage()
 @Component({
@@ -8,6 +9,7 @@ import { VueloService } from '../../services/vuelo.service';
   templateUrl: 'checkin.html',
 })
 export class CheckinPage {
+  currentVuelo: Vuelo;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private vueloService: VueloService) {
   }
@@ -16,8 +18,8 @@ export class CheckinPage {
     console.log('ionViewDidLoad CheckinPage');
   }
 
-  onSubmitCheckIn() {
-    this.vueloService.addtoMisTarjetas(this.vueloService.getCurrentVuelo(), this.vueloService.getCurrentIndex());
+  onSubmitCheckIn(value: {nombre:string, pasaporte:string, telefono:number}) {
+    this.vueloService.addtoMisTarjetas(this.vueloService.getCurrentVuelo(), value, this.vueloService.getCurrentIndex());
     this.navCtrl.pop();
   }
 
