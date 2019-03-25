@@ -1,3 +1,5 @@
+import { Datos } from "../app/datos";
+
 export interface Vuelo {
    aerolinea:string;
    aerolinea_foto:string;
@@ -13,4 +15,6 @@ export interface Vuelo {
    vuelta_fecha:Date;
 
    precio:number;
+
+   datos?: Datos;
 }

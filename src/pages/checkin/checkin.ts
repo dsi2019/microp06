@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the CheckinPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { VueloService } from '../../services/vuelo.service';
 
 @IonicPage()
 @Component({
@@ -15,14 +9,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CheckinPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private vueloService: VueloService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CheckinPage');
   }
 
-  onSubmitCheckIn(){
+  onSubmitCheckIn() {
+    this.vueloService.addtoMisTarjetas(this.vueloService.getCurrentVuelo(), this.vueloService.getCurrentIndex());
     this.navCtrl.pop();
   }
 

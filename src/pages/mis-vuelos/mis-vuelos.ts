@@ -24,7 +24,8 @@ export class MisVuelosPage {
     this.misVuelos = this.vueloService.getMisVuelos();
   };
 
-  onStartCheckIn(){
+  onStartCheckIn(value: Vuelo, i) {
+    this.vueloService.setCurrentVuelo(value, i)
     this.navCtrl.push(CheckinPage);
   }
 }

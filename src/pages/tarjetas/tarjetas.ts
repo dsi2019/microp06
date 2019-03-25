@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the TarjetasPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { VueloService } from '../../services/vuelo.service';
+import { Vuelo } from '../../models/vuelo.model';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TarjetasPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  misTarjetas: Vuelo[] =[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private vueloService: VueloService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TarjetasPage');
   }
+
+  ionViewWillEnter(){
+    this.misTarjetas = this.vueloService.getMisTarjetas();
+  };
 
 }
