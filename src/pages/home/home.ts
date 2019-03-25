@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { UnaTarjetaPage } from '../una-tarjeta/una-tarjeta';
-import { UnaReservaPage } from '../una-reserva/una-reserva';
 
 @Component({
   selector: 'page-home',
@@ -16,10 +15,4 @@ export class HomePage {
   onLoadTarjetaPage() {
     this.navCtrl.push(UnaTarjetaPage);
   }
-
-  onLoadReservaPage() {
-    this.navCtrl.push(UnaReservaPage);
-  }
-
-
 }

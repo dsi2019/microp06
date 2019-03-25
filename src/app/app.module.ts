@@ -15,7 +15,6 @@ import { TarjetasPage } from '../pages/tarjetas/tarjetas';
 import { UnaTarjetaPage } from '../pages/una-tarjeta/una-tarjeta';
 import { InfoPage } from '../pages/info/info';
 import { VueloService } from '../services/vuelo.service'
-import { UnaReservaPage } from '../pages/una-reserva/una-reserva';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { UnaReservaPage } from '../pages/una-reserva/una-reserva';
     HomePage,
     ReservasPage,
     BuscaPage,
-    UnaReservaPage,
     MisVuelosPage,
     CheckinPage,
     TarjetasPage,
@@ -40,7 +38,6 @@ import { UnaReservaPage } from '../pages/una-reserva/una-reserva';
     HomePage,
     ReservasPage,
     BuscaPage,
-    UnaReservaPage,
     MisVuelosPage,
     CheckinPage,
     TarjetasPage,
