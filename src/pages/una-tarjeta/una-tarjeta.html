@@ -18,13 +18,13 @@
           </ion-col>
           <ion-col>
               <ion-item>
-                <h4>Numero de Vuelo</h4>
+                <p>Numero de Vuelo:</p>
                 <h4>9949</h4>
               </ion-item>
           </ion-col>
           <ion-col>
             <ion-item>
-              <h4>Puerta:</h4>
+              <p>Puerta:</p>
               <h4>9</h4>
             </ion-item>
           </ion-col>
@@ -43,15 +43,21 @@
         <!-- Times / Groups -->
         <ion-row>
           <ion-col>
+              <ion-item>
+                  <p> Día:</p>
+                  <h4> {{vuelo.vuelta_fecha | date:'dd/MMMM/yy'}}</h4>
+              </ion-item>
+          </ion-col>
+          <ion-col>
             <ion-item>
                 <p>Hora de Salida:</p>
-                <p>{{vuelo.ida_inicio_hora}}</p>
+                <h4>{{vuelo.ida_inicio_hora}}</h4>
             </ion-item>
           </ion-col>
           <ion-col>
             <ion-item>
               <p>Hora de Embarque:</p>
-              <p>{{vuelo.ida_inicio_hora}}</p>
+              <h4>{{vuelo.ida_inicio_hora}}</h4>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -74,27 +80,78 @@
         </ion-row>
       </ion-grid>
 
-      <!-- <ion-item>
-        <ion-icon name="plane" item-start large></ion-icon>
-        <br>
-        <h2>{{vuelo.aerolinea}}</h2> -->
-        <!-- Add data-values for times -->
-        <!-- <h3> {{vuelo.vuelta_inicio_hora}} - {{vuelo.vuelta_destino_hora}}</h3> -->
-        <!-- Add data-values for date -->
-        <!-- <p> {{vuelo.vuelta_fecha | date:'dd/MM/yy'}}</p> -->
-        <!-- Add data-values for seat -->
-        <!-- <p>Puerta de Embarque: 32</p>
-        <p>Grupo de Embarque: 3</p>
-        <p>Hora de Embarque: 30 Minutos Antes del Vuelo</p>
-        <p> Asiento: 14E</p> -->
-      <!-- </ion-item> -->
-
-      <!-- <ion-item>
-        <ion-title>{{vuelo.destino}} hasta {{vuelo.inicio}}</ion-title>
-      </ion-item>
-      <ion-item>
-        <img src="../../assets/imgs/qr_code.png">
-      </ion-item> -->
+      <!-- Vuelta -->
+      <ion-grid>
+          <!-- Header -->
+          <ion-row>
+            <ion-col col-2>
+                <!-- Update this logo to match airline -->
+                <img src="../../assets/imgs/ryanair.png">
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                  <p>Numero de Vuelo:</p>
+                  <h4>939</h4>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <p>Puerta:</p>
+                <h4>10</h4>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <!-- Lugares -->
+          <ion-row text-center>
+            <ion-col>
+                <ion-title>{{vuelo.destino}} </ion-title>
+            </ion-col>
+            <ion-col>
+                <ion-icon name="plane" large></ion-icon>
+            </ion-col>
+            <ion-col>
+               <ion-title>{{vuelo.inicio}}</ion-title>
+            </ion-col>
+          </ion-row>
+          <!-- Times / Groups -->
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                  <p> Día:</p>
+                  <h4> {{vuelo.vuelta_fecha | date:'dd/MMMM/yy'}}</h4>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                  <p>Hora de Salida:</p>
+                  <h4>{{vuelo.vuelta_inicio_hora}}</h4>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <p>Hora de Embarque:</p>
+                <h4>{{vuelo.vuelta_inicio_hora}}</h4>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                  <ion-item>
+                    <p>Nombre</p>
+                    <ion-item *ngFor="let dato of datos">
+                        <h4>{{dato.nombre}}</h4>
+                    </ion-item>
+                </ion-item>
+              </ion-col>
+          </ion-row>
+          <ion-row text-center>
+            <ion-col>
+                <ion-item>
+                    <img src="../../assets/imgs/qr_code.png">
+                </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
   </ion-card>
 
 </ion-content>
