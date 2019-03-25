@@ -20,6 +20,7 @@ export class CheckinPage {
 
   onSubmitCheckIn(value: {nombre:string, pasaporte:string, telefono:number}) {
     this.vueloService.addtoMisTarjetas(this.vueloService.getCurrentVuelo(), this.vueloService.getCurrentIndex());
+    console.log(value);
     this.vueloService.addtoMisDatos(value);
     this.navCtrl.pop();
   }
