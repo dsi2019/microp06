@@ -24,7 +24,8 @@ export class TarjetasPage {
     this.misTarjetas = this.vueloService.getMisTarjetas();
   };
 
-  onLoadTarjeta() {
+  onLoadTarjeta(value: Vuelo, i) {
+    this.vueloService.setCurrentTarjeta(value, i)
     this.navCtrl.push(UnaTarjetaPage);
   }
 }
