@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VueloService } from '../../services/vuelo.service';
 import { Vuelo } from '../../models/vuelo.model';
+import { UnaTarjetaPage } from '../una-tarjeta/una-tarjeta';
 
 @IonicPage()
 @Component({
@@ -23,4 +24,7 @@ export class TarjetasPage {
     this.misTarjetas = this.vueloService.getMisTarjetas();
   };
 
+  onLoadTarjeta() {
+    this.navCtrl.push(UnaTarjetaPage);
+  }
 }

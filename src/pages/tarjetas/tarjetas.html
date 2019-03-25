@@ -9,7 +9,7 @@
 
 <ion-content padding>
     <ion-list>
-        <button ion-item *ngFor="let vuelo of misTarjetas; let i=index">
+        <button ion-item *ngFor="let vuelo of misTarjetas; let i=index" (click)="onLoadTarjeta()">
           <ion-card>
               <ion-item>
                   <ion-title> {{vuelo.inicio}} hasta {{vuelo.destino}}</ion-title>
