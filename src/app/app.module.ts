@@ -10,10 +10,10 @@ import { HomePage } from '../pages/home/home';
 import { ReservasPage } from '../pages/reservas/reservas';
 import { BuscaPage } from '../pages/busca/busca';
 import { MisVuelosPage } from '../pages/mis-vuelos/mis-vuelos';
+import { CheckinPage } from '../pages/checkin/checkin';
 import { TarjetasPage } from '../pages/tarjetas/tarjetas';
 import { UnaTarjetaPage } from '../pages/una-tarjeta/una-tarjeta';
 import { InfoPage } from '../pages/info/info';
-import { CheckinPage } from '../pages/checkin/checkin';
 import { VueloService } from '../services/vuelo.service'
 import { UnaReservaPage } from '../pages/una-reserva/una-reserva';
 
@@ -25,9 +25,9 @@ import { UnaReservaPage } from '../pages/una-reserva/una-reserva';
     BuscaPage,
     UnaReservaPage,
     MisVuelosPage,
+    CheckinPage,
     TarjetasPage,
     UnaTarjetaPage,
-	  CheckinPage,
     InfoPage
   ],
   imports: [
@@ -42,9 +42,9 @@ import { UnaReservaPage } from '../pages/una-reserva/una-reserva';
     BuscaPage,
     UnaReservaPage,
     MisVuelosPage,
+    CheckinPage,
     TarjetasPage,
     UnaTarjetaPage,
-	  CheckinPage,
     InfoPage
   ],
   providers: [

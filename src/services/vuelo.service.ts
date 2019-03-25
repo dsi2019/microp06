@@ -44,6 +44,9 @@ export class VueloService{
         ];
 
         private mis_vuelos: Vuelo[] =[];
+        private mis_tarjetas: Vuelo[] = [];
+        private currentVuelo: Vuelo;
+        private currentIndex: any;
 
     constructor(){
     }
@@ -52,12 +55,35 @@ export class VueloService{
         return this.vuelos;
     }
 
-    addtoMisVuelos(value: Vuelo, i){
+    addtoMisVuelos(value: Vuelo, i) {
         this.mis_vuelos.push(value);
         this.vuelos.splice(i,1);
     }
 
-    getMisVuelos(){
+    addtoMisTarjetas(value: Vuelo, i) {
+        this.mis_tarjetas.push(value);
+        this.mis_vuelos.splice(i,1);
+        this.setCurrentVuelo(null, null);
+    }
+
+    setCurrentVuelo(value: Vuelo, i) {
+        this.currentVuelo = value;
+        this.currentIndex = i;
+    }
+
+    getCurrentVuelo() {
+        return this.currentVuelo;
+    }
+
+    getCurrentIndex() {
+        return this.currentIndex;
+    }
+
+    getMisVuelos() {
         return this.mis_vuelos;
+    }
+
+    getMisTarjetas() {
+        return this.mis_tarjetas;
     }
 }

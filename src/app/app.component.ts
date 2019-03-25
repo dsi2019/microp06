@@ -7,7 +7,6 @@ import { HomePage } from '../pages/home/home';
 import { ReservasPage } from '../pages/reservas/reservas';
 import { MisVuelosPage } from '../pages/mis-vuelos/mis-vuelos';
 import { TarjetasPage } from '../pages/tarjetas/tarjetas';
-import {CheckinPage} from '../pages/checkin/checkin';
 import { InfoPage } from '../pages/info/info';
 
 @Component({

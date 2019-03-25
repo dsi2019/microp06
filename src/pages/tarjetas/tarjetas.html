@@ -8,4 +8,37 @@
 </ion-header>
 
 <ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let vuelo of vuelos; let i=index" (click)="onAddVuelo(vuelo, i)">
+          <ion-card>
+              <ion-item>
+                  <ion-title> {{vuelo.inicio}} hasta {{vuelo.destino}}</ion-title>
+              </ion-item>
+              <ion-item>
+                  <ion-icon name="plane" item-start large></ion-icon>
+                  <br>
+                  <!-- Add data-values for times -->
+                  <h3> {{vuelo.ida_inicio_hora}} - {{vuelo.ida_destino_hora}}</h3>
+                  <h3> {{vuelo.aerolinea}}</h3>
+                  <!-- Add data-values for date -->
+                  <p> {{vuelo.ida_fecha | date:'dd/MM/yy'}}</p>
+              </ion-item>
+              <ion-item>
+                  <ion-title>{{vuelo.destino}} hasta {{vuelo.inicio}}</ion-title>
+              </ion-item>
+              <ion-item>
+                  <ion-icon name="plane" item-start large></ion-icon>
+                  <br>
+                  <!-- Add data-values for times -->
+                  <h3> {{vuelo.vuelta_inicio_hora}} - {{vuelo.vuelta_destino_hora}}</h3>
+                  <h3> {{vuelo.aerolinea}}</h3>
+                  <!-- Add data-values for date -->
+                  <p> {{vuelo.vuelta_fecha | date:'dd/MM/yy'}}</p>
+              </ion-item>
+              <ion-item>
+                <p><strong>Precio: </strong>{{vuelo.precio | number:'1.0-0'}}€</p>
+              </ion-item>
+          </ion-card>
+        </button>
+    </ion-list>
 </ion-content>
