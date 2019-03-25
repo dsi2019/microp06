@@ -10,6 +10,7 @@
 
       <ion-grid>
         <!-- Header -->
+        <br>
         <ion-row>
           <ion-col col-2>
               <!-- Update this logo to match airline -->
@@ -34,7 +35,6 @@
               <ion-title>{{vuelo.inicio}} </ion-title>
           </ion-col>
           <ion-col>
-              <ion-icon name="plane" large></ion-icon>
           </ion-col>
           <ion-col>
              <ion-title>{{vuelo.destino}}</ion-title>
@@ -64,10 +64,10 @@
         <ion-row>
             <ion-col>
                 <ion-item>
-                    <p>Nombre</p>
-                    <ion-item *ngFor="let dato of datos">
-                        <h4>{{dato.nombre}}</h4>
-                    </ion-item>
+                  <h2>Nombre</h2>
+                  <ion-item *ngFor="let dato of datos">
+                      <h1>{{dato.nombre}}</h1>
+                  </ion-item>
               </ion-item>
             </ion-col>
         </ion-row>
