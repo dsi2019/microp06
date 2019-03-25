@@ -1,7 +1,7 @@
 import { Vuelo } from "../models/vuelo.model";
 
 export class VueloService{
-    
+
     private vuelos: Vuelo[] =[
         {
             "aerolinea":"British Airways",
@@ -42,8 +42,9 @@ export class VueloService{
             "vuelta_fecha": new Date(2019,10,2),
             "precio": 300}
         ];
+
         private mis_vuelos: Vuelo[] =[];
-    
+
     constructor(){
     }
 
@@ -51,15 +52,12 @@ export class VueloService{
         return this.vuelos;
     }
 
-    addtoMisVuelos(value: Vuelo){
+    addtoMisVuelos(value: Vuelo, i){
         this.mis_vuelos.push(value);
-        }
+        this.vuelos.splice(i,1);
+    }
 
     getMisVuelos(){
         return this.mis_vuelos;
-    }
-
-    addVuelo(value: Vuelo) {
-        this
     }
 }

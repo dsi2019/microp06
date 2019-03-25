@@ -23,7 +23,7 @@ export class BuscaPage {
     this.vuelos = this.vueloService.getVuelos();
   };
 
-  onAddVuelo(value: Vuelo){
-    this.vueloService.addtoMisVuelos(value);
+  onAddVuelo(value: Vuelo, i){
+    this.vueloService.addtoMisVuelos(value, i);
   }
 }

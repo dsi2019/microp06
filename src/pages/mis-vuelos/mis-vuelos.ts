@@ -11,6 +11,7 @@ import { Vuelo } from '../../models/vuelo.model';
 export class MisVuelosPage {
 
   misVuelos: Vuelo[] =[];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private vueloService: VueloService) {
   }
 

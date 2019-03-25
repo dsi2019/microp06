@@ -6,7 +6,7 @@
 
 <ion-content padding>
   <ion-list>
-      <button ion-item *ngFor="let vuelo of vuelos" (click) =onAddVuelo()>
+      <button ion-item *ngFor="let vuelo of vuelos; let i=index" (click)="onAddVuelo(vuelo, i)">
         <p><strong>Aerolinea: </strong>{{vuelo.aerolinea}}</p>
         <p><strong>Inicio: </strong>{{vuelo.inicio}}</p>
         <p><strong>Destino: </strong>{{vuelo.destino}}</p>
@@ -17,5 +17,4 @@
         <p><strong>Precio: </strong>{{vuelo.precio | number:'1.0-0'}}€</p>
       </button>
   </ion-list>
-
 </ion-content>
