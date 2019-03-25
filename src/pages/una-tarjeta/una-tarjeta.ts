@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VueloService } from '../../services/vuelo.service';
 import { Vuelo } from '../../models/vuelo.model';
-
+import { Datos } from '../../app/datos';
 
 @IonicPage()
 @Component({

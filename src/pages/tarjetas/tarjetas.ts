@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VueloService } from '../../services/vuelo.service';
 import { Vuelo } from '../../models/vuelo.model';
 import { UnaTarjetaPage } from '../una-tarjeta/una-tarjeta';
+import { Datos } from '../../app/datos';
 
 @IonicPage()
 @Component({
@@ -28,7 +29,7 @@ export class TarjetasPage {
 
   onLoadTarjeta(value: Vuelo, i) {
     this.vueloService.setCurrentVuelo(value, i);
-    this.vueloService.setCurrentDatos(i);
+    this.vueloService.setCurrentDatos(this.misDatos[i]);
     this.navCtrl.push(UnaTarjetaPage);
   }
 }
