@@ -12,7 +12,7 @@ En una primera reunión con el cliente ha solicitado los siguientes requisitos:
 - Consulta y facturación de reservas. (Terminado)
 - Visualización de tarjetas de embarque. (Terminado)
 - Página de información de aspectos legales de la reserva y realización de
-vuelos.(Terminado)
+vuelos. (Terminado)
 - Enlace a la página Web de la compañía. (Terminado)
 
 # Requisitos funcionales
