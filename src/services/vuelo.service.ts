@@ -47,6 +47,9 @@ export class VueloService{
         private mis_tarjetas: Vuelo[] = [];
         private currentVuelo: Vuelo;
         private currentIndex: any;
+        private currentTarjeta: Vuelo;
+        private currentTarjetaIndex: any;
+
 
     constructor(){
     }
@@ -77,6 +80,19 @@ export class VueloService{
 
     getCurrentIndex() {
         return this.currentIndex;
+    }
+
+    setCurrentTarjeta(value: Vuelo, i) {
+        this.currentTarjeta = value;
+        this.currentTarjetaIndex = i;
+    }
+
+    getCurrentTarjeta() {
+        return this.currentTarjeta;
+    }
+
+    getCurrentTarjetaIndex() {
+        return this.currentTarjeta;
     }
 
     getMisVuelos() {
