@@ -8,33 +8,54 @@
   <ion-list>
       <button ion-item *ngFor="let vuelo of vuelos; let i=index" (click)="onAddVuelo(vuelo, i)">
         <ion-card>
-            <ion-item>
-                <ion-title> {{vuelo.inicio}} hasta {{vuelo.destino}}</ion-title>
-            </ion-item>
-            <ion-item>
-                <ion-icon name="plane" item-start large></ion-icon>
-                <br>
+
+          <ion-grid>
+            <!-- IDA -->
+            <ion-row>
+                <ion-item>
+                    <ion-title> {{vuelo.inicio}} hasta {{vuelo.destino}}</ion-title>
+                </ion-item>
+            </ion-row>
+            <ion-row>
+                <ion-col col-1>
+                    <ion-item>
+                        <img src="../../assets/imgs/ryanair.png">
+                    </ion-item>
+                </ion-col>
+                <ion-col> 
+                    <ion-item>
+                        <h2> {{vuelo.aerolinea}}</h2>
+                        <h3> {{vuelo.ida_inicio_hora}} - {{vuelo.ida_destino_hora}}</h3>
+                        <p> {{vuelo.ida_fecha | date:'dd/MM/yy'}}</p>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <!-- Vueltas -->
+            <ion-row>
+                <ion-item>
+                    <ion-title>{{vuelo.destino}} hasta {{vuelo.inicio}}</ion-title>
+                </ion-item>
+            </ion-row>
+            <ion-row>
+                <ion-col col-1>
+                    <ion-item>
+                        <img src="../../assets/imgs/ryanair.png">
+                    </ion-item>
+                </ion-col>
+                <ion-col> 
+                    <ion-item>
                 <h2> {{vuelo.aerolinea}}</h2>
-                <!-- Add data-values for times -->
-                <h3> {{vuelo.ida_inicio_hora}} - {{vuelo.ida_destino_hora}}</h3>
-                <!-- Add data-values for date -->
-                <p> {{vuelo.ida_fecha | date:'dd/MM/yy'}}</p>
-            </ion-item>
-            <ion-item>
-                <ion-title>{{vuelo.destino}} hasta {{vuelo.inicio}}</ion-title>
-            </ion-item>
-            <ion-item>
-                <ion-icon name="plane" item-start large></ion-icon>
-                <br>
-                <h2> {{vuelo.aerolinea}}</h2>
-                <!-- Add data-values for times -->
                 <h3> {{vuelo.vuelta_inicio_hora}} - {{vuelo.vuelta_destino_hora}}</h3>
-                <!-- Add data-values for date -->
                 <p> {{vuelo.vuelta_fecha | date:'dd/MM/yy'}}</p>
-            </ion-item>
-            <ion-item>
-              <h2><strong>Precio: </strong>{{vuelo.precio | number:'1.0-0'}}€</h2>
-            </ion-item>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-item>
+                    <h2><strong>Precio: </strong>{{vuelo.precio | number:'1.0-0'}}€</h2>
+                  </ion-item>
+            </ion-row>
+          </ion-grid>
         </ion-card>
       </button>
   </ion-list>
