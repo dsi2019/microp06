@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content padding>
-  <form>
+    <form (ngSubmit)="onSubmitCheckIn()" #f="ngForm">
     <ion-list>
       <ion-item>
         <ion-label floating >Nombre</ion-label>
@@ -23,6 +23,6 @@
         <ion-input type="text"></ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button block type = "submit">Aceptar</button>
+    <button ion-button>Aceptar</button>
   </form>
 </ion-content>

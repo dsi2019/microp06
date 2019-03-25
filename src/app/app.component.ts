@@ -26,7 +26,6 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Reservas', component: ReservasPage },
       { title: 'Mis Vuelos', component: MisVuelosPage},
-      { title: 'Check-In', component: CheckinPage},
       { title: 'Tarjetas', component: TarjetasPage},
       { title: 'Información', component: InfoPage}
     ];
