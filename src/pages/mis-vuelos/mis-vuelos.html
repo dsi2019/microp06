@@ -9,7 +9,7 @@
 
 <ion-content padding>
     <ion-list>
-        <button ion-item *ngFor="let vuelo of misVuelos; let i=index" (click)="onAddVuelo(vuelo, i)">
+        <button ion-item *ngFor="let vuelo of misVuelos; let i=index" (click)="onStartCheckIn(vuelo, i)">
           <ion-card>
               <ion-item>
                   <ion-title> {{vuelo.inicio}} hasta {{vuelo.destino}}</ion-title>
