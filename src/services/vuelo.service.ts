@@ -6,7 +6,7 @@ export class VueloService{
     private vuelos: Vuelo[] =[
         {
             "aerolinea":"British Airways",
-            "aerolinea_foto":"#",
+            "aerolinea_foto":"../../assets/imgs/britishairways.png",
             "inicio":"Madrid",
             "destino":"Paris",
             "ida_inicio_hora":"16:30",
@@ -19,7 +19,7 @@ export class VueloService{
         },
         {
             "aerolinea":"Ryanair",
-            "aerolinea_foto":"#",
+            "aerolinea_foto":"../../assets/imgs/ryanair.png",
             "inicio":"Madrid",
             "destino":"Paris",
             "ida_inicio_hora":"12:30",
@@ -32,7 +32,7 @@ export class VueloService{
         },
         {
             "aerolinea":"Ibería",
-            "aerolinea_foto":"#",
+            "aerolinea_foto":"../../assets/imgs/iberia.png",
             "inicio":"Madrid",
             "destino":"Paris",
             "ida_inicio_hora":"10:30",
