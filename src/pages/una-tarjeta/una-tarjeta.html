@@ -5,24 +5,48 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
-      <ion-item>
-          <ion-icon name="plane" item-start large></ion-icon>
-          <br>
-          <!-- Add data-values for times -->
-          <h3> 16:30 - 18:30</h3>
-          <!-- Add data-values for date -->
-          <p>Lunes, 28 de Febrero</p>
-          <!-- Add data-values for seat -->
-          <p> Asiento: 12A</p>
+  <ion-card *ngFor="let vuelo of tarjeta">
+      <ion-item *ngFor="let dato of datos">
+        <h1>{{dato.getNombre()}}</h1>
+      </ion-item>
 
-        </ion-item>
-        <ion-item>
-            <ion-title> Madrid hasta Paris</ion-title>
-        </ion-item>
-        <ion-item>
-            <img src="../../assets/imgs/qr_code.png">
-        </ion-item>
+      <ion-item>
+        <ion-icon name="plane" item-start large></ion-icon>
+        <br>
+        <!-- Add data-values for times -->
+        <h2>{{vuelo.aerolinea}}</h2>
+        <h3> {{vuelo.ida_inicio_hora}} - {{vuelo.ida_destino_hora}}</h3>
+        <!-- Add data-values for date -->
+        <p> {{vuelo.ida_fecha | date:'dd/MM/yy'}}</p>
+        <!-- Add data-values for seat -->
+        <p> Asiento: 12A</p>
+      </ion-item>
+
+      <ion-item>
+          <ion-title>{{vuelo.inicio}} hasta {{vuelo.destino}}</ion-title>
+      </ion-item>
+
+      <ion-item>
+        <img src="../../assets/imgs/qr_code.png">
+      </ion-item>
+      <br><br>
+
+      <ion-item>
+        <ion-icon name="plane" item-start large></ion-icon>
+        <br>
+        <h3> {{vuelo.vuelta_inicio_hora}} - {{vuelo.vuelta_destino_hora}}</h3>
+        <!-- Add data-values for date -->
+        <p> {{vuelo.vuelta_fecha | date:'dd/MM/yy'}}</p>
+        <!-- Add data-values for seat -->
+        <p> Asiento: 14E</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-title>{{vuelo.destino}} hasta {{vuelo.inicio}}</ion-title>
+      </ion-item>
+      <ion-item>
+        <img src="../../assets/imgs/qr_code.png">          
+      </ion-item>
 
   </ion-card>
 

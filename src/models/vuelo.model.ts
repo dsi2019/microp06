@@ -15,6 +15,4 @@ export interface Vuelo {
    vuelta_fecha:Date;
 
    precio:number;
-
-   datos?: Datos;
-}
+};

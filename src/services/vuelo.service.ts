@@ -1,4 +1,5 @@
 import { Vuelo } from "../models/vuelo.model";
+import { Datos } from "../app/datos";
 
 export class VueloService{
 
@@ -45,10 +46,10 @@ export class VueloService{
 
         private mis_vuelos: Vuelo[] =[];
         private mis_tarjetas: Vuelo[] = [];
+        private tarjetas_datos: Datos[] = [];
         private currentVuelo: Vuelo;
         private currentIndex: any;
-        private currentTarjeta: Vuelo;
-        private currentTarjetaIndex: any;
+        private currentDatos: Datos[] = [];
 
 
     constructor(){
@@ -63,8 +64,9 @@ export class VueloService{
         this.vuelos.splice(i,1);
     }
 
-    addtoMisTarjetas(value: Vuelo, i) {
+    addtoMisTarjetas(value: Vuelo, datos, i) {
         this.mis_tarjetas.push(value);
+        this.tarjetas_datos.push(datos);
         this.mis_vuelos.splice(i,1);
         this.setCurrentVuelo(null, null);
     }
@@ -72,6 +74,10 @@ export class VueloService{
     setCurrentVuelo(value: Vuelo, i) {
         this.currentVuelo = value;
         this.currentIndex = i;
+    }
+
+    setCurrentDatos(i) {
+        this.currentDatos.push(tarjetas_datos[i]);
     }
 
     getCurrentVuelo() {
@@ -82,17 +88,8 @@ export class VueloService{
         return this.currentIndex;
     }
 
-    setCurrentTarjeta(value: Vuelo, i) {
-        this.currentTarjeta = value;
-        this.currentTarjetaIndex = i;
-    }
-
-    getCurrentTarjeta() {
-        return this.currentTarjeta;
-    }
-
-    getCurrentTarjetaIndex() {
-        return this.currentTarjeta;
+    getCurrentDatos() {
+        return this.currentDatos;
     }
 
     getMisVuelos() {
@@ -101,5 +98,9 @@ export class VueloService{
 
     getMisTarjetas() {
         return this.mis_tarjetas;
+    }
+
+    getTarjetasDatos() {
+        return this.tarjetas_datos;
     }
 }
