@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {UnaTarjetaPage} from '../pages/una-tarjeta/una-tarjeta';
 
 /**
  * Generated class for the CheckinPage page.
@@ -19,7 +20,10 @@ export class CheckinPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CheckinPage');
+    console.log('UnaTarjetaPage');
   }
-
+  
+  menuPage(){
+	this.navCtrl.pop();  
+	}
 }
